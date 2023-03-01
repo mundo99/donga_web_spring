@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>캐릭터 월드컵 우승</title>
+</head>
+<body style="background-color:yellow">
+<div align="center">
+	<h2>Congratulations</h2>
+			<h3>승자는 <span th:text="${winner}" color="blue"></span>입니다!!!</h3>
+			<td><img th:src="|/${winner}.jpg|"  th:alt="|/${winner}.jpg|" width="500" height="500"><br>
+			<a href="/star/list">결과보기</a>
+</div>
+</body>
+</html>

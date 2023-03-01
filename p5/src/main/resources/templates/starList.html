@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body style="background-color:rgb(255, 255, 128)">
+	<div align="center">
+	<h3>투표 결과</h3>
+	<table border="1">
+		<tr> <th>이름 <th>준우승 횟수 <th>우승 횟수
+		<tr th:each="m:${list}"> 
+			<td th:text="${m.name}" style="color:blue; font-weight:bold">
+			<td th:text="${m.count_semi}">
+			<td th:text="${m.count_final}">
+	</table><br>
+	<form method="get" action="/star/reset"><br>
+	<button>투표결과 초기화</button>
+	</form>
+	<a href="/star/1">4강전 다시 시작</a> 
+	</div>
+</html>

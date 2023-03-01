@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>400</title>
+</head>
+<body style="background-color:#FBEFFB">
+<img src="/IU.jpg" width="250" height="280" alt="드래곤4">
+<span style="color:gray; font-size:0.7em">출처:https://www.9oodnews.com/news/articleView.html?idxno=4619</span><br>
+
+<h2> 400번대에러페이지입니다. </h2>
+<strong>에러코드: </strong><span th:text="${status}"></span><br>
+<strong>path : </strong><span th:text="${path}"></span><br>
+<strong>에러이름: </strong><span th:text="${error}" style="background-color:aqua"></span><br> 
+<strong>예외: </strong><span th:text="${exception}"></span><p><p>   
+<a href="/">첫화면으로돌아가기</a>    
+</body>
+</html>

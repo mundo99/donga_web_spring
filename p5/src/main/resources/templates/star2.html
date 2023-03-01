@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>캐릭터 월드컵</title>
+</head>
+<body>
+<div align="center">
+	<h2>고르시오(두 번째 매치)</h2>
+	<form method="get" action="/star/3" >
+		<table border ="1" >
+		<tr>
+			<td><img src="/뚱이.jpg" alt="뚱이" width="500" height="500"><br>
+			<span style="color:gray; font-size:0.7em">출처:https://www.pinterest.es/pin/605593481161878121/</span><br> 
+			<td><img src="/흰둥이.jpg" alt="흰둥이" width="500" height="500"><br>
+			<span style="color:gray; font-size:0.7em">출처:https://www.pinterest.es/pin/772367404862187519/</span><br> 
+		<tr>
+			<th>
+			<input type="radio" name="choice2" value="뚱이"> 뚱이
+			<th>
+			<input type="radio" name="choice2" value="흰둥이"> 흰둥이
+		</table>
+		<p>
+			<input type="hidden" name="choice1" th:value="${choice1}"> 
+		<button alline="cenbter">선택</button>
+	</form>
+</div>
+</body>
+</html>

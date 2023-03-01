@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Moon BANK</title></head>
+<style> 
+	span {
+	color:gray; font-size:0.7em;
+	} 
+</style>
+<body style="background-color:#F8ECE0">
+	<sapn th:text ="|총 회원: ${count} 명|"></sapn>
+	<div align="center">
+		<h1>Moon BANK</h1> 
+		<form method="get" action="/login/check"> 
+			ID: <input type="text" name="id"> <p>
+				<input type="submit" value="login"> &nbsp;&nbsp; 
+			<a href="/member/register"> 회원가입 </a> &nbsp;&nbsp; 
+			<a href = "/qa/question"> 질문답변</a> <p>
+		</form> 
+		<img src="/IU.jpg" width="280" height="330" alt="아이유"><br>
+		<span>반 고흐의 해바라기 (출처:위키백과)</span>
+	</div> 
+</body>
+</html>

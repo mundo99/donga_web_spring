@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>캐릭터 월드컵</title>
+</head>
+<body style="background-color:pink">
+<div align="center">
+	<h2>고르시오(결승!!!)</h2>
+	<form method="get" action="/star/winner" >
+		<table border ="1" >
+		<tr>
+			<td><img th:src="|/${choice1}.jpg|"  th:alt="|/${choice1}.jpg|" width="500" height="500"><br>
+			<td><img th:src="|/${choice2}.jpg|"  th:alt="|/${choice2}.jpg|" height="500"><br>
+		<tr>
+			<th><input type="radio" name="winner" th:value="${choice1}">
+			<span th:text="${choice1}"></span> 
+			<th><input type="radio" name="winner" th:value="${choice2}">
+			<span th:text="${choice2}"></span> 
+		</table>
+		<p>
+		<input type="hidden" name="h_winner1" th:value="${choice1}">
+		<input type="hidden" name="h_winner2" th:value="${choice2}">
+		<button alline="cenbter">최종선택</button>
+	</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<head><title>나의 거래 내역</title></head>
+<body style="background-color:rgb(255, 255, 128)">
+	<div align="center">
+		<h4>
+		<span style="color:blue" th:text="${id}">id</span>
+		<span th:if="${#lists.size(list)}==0">님은 아직 첫 거래 이전이십니다.</span>
+		<span th:if="${#lists.size(list)}>0">님의 거래 내역 (최근거래순)</span>
+		</h4>
+		<span th:text="|현재 잔액: ${balance} 원|" style="background-color:white"></span><p>
+		<span th:text="|총 ${#lists.size(list)}건의 거래가 있습니다.|" style="color:gray; font-size:0.9em"></span><p>
+		<table width="500" border="1" th:if="${#lists.size(list)}>0">
+			<tr>
+			<th>거래일시<th>입금액<th>출금액<th>이체여부<th>이체상대
+			<tr th:each="b:${list}"> 
+			<td th:text="${b.tdate}">tdate
+			<td th:text="${b.de}" style="color:blue; text-align:right">de
+			<td th:text="${b.wi}" style="color:red; text-align:right">wi
+			<td th:switch="${b.tcode}" style="text-align:center">
+			<span th:case=0>-</span>
+			<span th:case=1>이체보냄</span>
+			<span th:case=2>이체받음</span> 
+			<td th:text="${b.tid}" style="text-align:center">tid
+		</table><br>
+		<a href="/menu">menu</a>
+	</div>
+</body>
+</html>

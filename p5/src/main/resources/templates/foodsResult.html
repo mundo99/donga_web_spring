@@ -1,0 +1,18 @@
+<!DOCTYPE html><html xmlns:th="http://www.thymeleaf.com">
+<head><meta charset="UTF-8">
+<title>관심있는 식문화 결과</title></head>
+<style>
+.blue { color:blue; }
+</style>
+<body style="background-color:lime">
+	<span th:text="${age}" class="blue">age</span>세
+	<span th:text="${gender}" class="blue">gender</span> <p>
+	좋아하는 음식: <br>
+	<span th:text="${foods}" class="blue">foods</span> <p>
+		외모 자신감(1~5): <span th:text="${face}" class="blue">age</span> <br>
+		학점 자신감(1~5): <span th:text="${grade}" class="blue">age</span> <br>
+		수업 자신감(1~5): <span th:text="${omg}" class="blue">age</span> <p>
+		의견: <br>
+	<span th:text="${comments}" class="blue">comments</span>
+</body>
+</html>
